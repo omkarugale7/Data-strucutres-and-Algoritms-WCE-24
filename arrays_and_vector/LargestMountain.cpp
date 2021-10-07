@@ -2,11 +2,8 @@
 using namespace std ;
 
 // An array is given. A mountain means first the elements increase and then decrease. 
-<<<<<<< HEAD
 // we have to find length of the longest mountain from given array
-=======
 // find the length of longest mountain
->>>>>>> 11bdc320a76a2c69509f96ae42c2e8f9f6334707
 
 int longest_mountain(vector<int> arr)
 {
