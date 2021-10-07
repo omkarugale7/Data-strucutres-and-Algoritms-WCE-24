@@ -1,6 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std ;
 
+/**
+Given two sorted arrays. Merge them such that entire array is also sorted
+*/
+
 vector<int> merge(vector<int> a, vector<int> b)
 {
     vector<int> merged_list ;
