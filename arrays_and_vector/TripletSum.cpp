@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std ;
 
+    /**
+	 * From given array arr, find all the triplets such that their sum = target
+	 */
 
 vector<vector<int>> tripletSum(vector<int> arr, int target)
 {
@@ -9,7 +12,8 @@ vector<vector<int>> tripletSum(vector<int> arr, int target)
 
 
     vector<vector<int>> ans ;
-
+    
+    // for each element take right side of the array and perform two pointer algorithm
     for (int i = 0; i < n-2 ; i++)
     {
         int x = arr[i] ;

@@ -2,25 +2,30 @@
 using namespace std ;
 
 // An array is given. A mountain means first the elements increase and then decrease. 
-// length of mountain
+// we have to find length of the longest mountain from given array
 
 int longest_mountain(vector<int> arr)
 {
    int n = arr.size() ;
    int i = 0 , j = 0, max_len = 0 ;
 
+  // first go at the minima and put a pointer there
    while (j < n-1 && arr[j] > arr[j+1])
 		      j++ ;
 	i = j ;
 
+    
     while (j < n-1)
 		{
+            // move until we get a peak
 			while (j < n-1 && arr[j] < arr[j+1]) j++ ;
 			
 			if (j == n-1) break ;
 			
+            // Now move until we get a minima again
 			while (j < n-1 && arr[j] > arr[j+1]) j++ ;
 			
+            // i to j is a mountain. Check its length and compare maxLenTillNow
 			if (j - i + 1 > max_len) max_len = j - i +1 ;
 			
 			i = j ;

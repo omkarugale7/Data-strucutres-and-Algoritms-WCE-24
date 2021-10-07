@@ -22,7 +22,7 @@ int trappedWater(vector<int> heights)
             i++ ;
         }
         else
-       {
+        {
             if (heights[j] > r_max) r_max = heights[j] ;
             else water += r_max - heights[j] ;
             j-- ;
