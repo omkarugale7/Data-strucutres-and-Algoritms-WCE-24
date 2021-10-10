@@ -36,7 +36,7 @@ int angryBirds(vector<int> nests, int b)
 {
     int n = nests.size() ;
     
-    // Minimum distance between any two birds can be zero and max = nests[n-1]
+    // Minimum distance between any two birds can be zero and max = nests[n-1] - nests[0]
     int s = 0 , e = nests[n-1] - nests[0] , ans = - 1;
 
     // Perform binary search to find maximum possible minimum distance between birds
