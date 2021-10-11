@@ -1,1 +1,43 @@
-Please add assignment files here !! 
+// I didn't use pointers in this program.
+
+
+#include <stdio.h>
+#include <conio.h>
+
+struct employee
+{
+    char name[50];
+    int age;
+    int emp_id;
+    int salary; 
+
+};
+
+int main(){
+    int i;
+    struct employee a[i];
+    printf("Enter the number of Employee : ");
+    scanf("%d", &i);
+    printf("Enter The Employee Information : ");
+    for(int j=1; j<=i; j++){
+        printf("\nEnter Name : ");
+        scanf("%s", &a[j].name);
+        printf("Enter the age : ");
+        scanf("%d", &a[j].age);
+        printf("Enter the Employee id : ");
+        scanf("%d", &a[j].emp_id);
+        printf("Enter the salary : "); 
+        scanf("%d", &a[j].salary);
+    }
+    printf("\nDisplaying Information of the Employees : \n");
+    for(int j=1; j<=i; j++){
+        printf("\nName : %s", a[j].name);
+        printf("\nAge : %d", a[j].age);
+        printf("\nEmployee id : %d", a[j].emp_id);
+        printf("\nSalary : %d", a[j].salary);
+        printf("\n\n");
+    }
+    return 0;
+}
+
+    
