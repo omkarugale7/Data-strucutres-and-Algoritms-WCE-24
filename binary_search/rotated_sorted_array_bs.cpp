@@ -10,7 +10,6 @@ int rotated_bs(vector<int> arr, int key)
         int mid = (s+e)/2 ;
         if (arr[mid] == key) return mid ;
 
-
         if (arr[s] < arr[mid])
         {
             if (arr[s] <= key and key < arr[mid]) e = mid - 1 ;
@@ -21,9 +20,6 @@ int rotated_bs(vector<int> arr, int key)
             if (arr[e] >= key and key > arr[mid]) s = mid + 1 ;
             else e = mid - 1 ;
         }
-
-
-
 
     }
 
