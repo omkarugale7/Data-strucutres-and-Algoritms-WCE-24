@@ -15,9 +15,11 @@ struct employee
 
 int main(){
     int i;
-    struct employee a[i];
     printf("Enter the number of Employee : ");
     scanf("%d", &i);
+    
+    struct employee a[i];
+    
     printf("Enter The Employee Information : ");
     for(int j=1; j<=i; j++){
         printf("\nEnter Name : ");
