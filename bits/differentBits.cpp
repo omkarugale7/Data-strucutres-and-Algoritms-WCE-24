@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std ;
 
-// Given to integers a and b. find how many number of bits should be changed to make a and b equal
+// Given two integers a and b. find how many number of bits should be changed to make a and b equal
 
 
 int noOfDifferentBits(int a, int b)
