@@ -2,6 +2,9 @@
 using namespace std ;
 
 
+// Given A sorted array. But it is rotated. 
+// Perform binary search on this array
+
 int rotated_bs(vector<int> arr, int key)
 {
     int s = 0 , e = arr.size()-1 ;
