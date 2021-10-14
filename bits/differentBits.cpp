@@ -8,7 +8,7 @@ int noOfDifferentBits(int a, int b)
 {
     int x = a^b ;
 
-    // in x only that bits are set. Which are different in and b
+    // in x only that bits are set. Which are different in a and b
 
     int ans = 0 ;
 
