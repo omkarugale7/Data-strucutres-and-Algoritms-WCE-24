@@ -1,6 +1,7 @@
 #include<iostream>
 #include<stack>
 #include<cmath>
+#include<algorithm>
 using namespace std;
 int prec(char c)
 {
@@ -48,6 +49,9 @@ string infixtoprefix(string s)
 		ans = ans + st.top();
 		st.pop();
 	}
+
+     reverse(ans.begin(), ans.end()) ;
+    
 	return ans;
 }
 int main()
