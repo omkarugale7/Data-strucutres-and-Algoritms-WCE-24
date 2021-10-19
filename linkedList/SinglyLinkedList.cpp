@@ -12,18 +12,17 @@ class Node{
         }
 } *head ;
 
+// make a new node with given data and point its next to head
+// make this new node head
 void insertAtFront(Node* &head, int val)
 {
-    if (head == NULL) {
-        Node* n = new Node(val, NULL) ;
-        head = n; 
-    }
-    else{
         Node* n = new Node(val, head) ;
         head = n ;
-    }
 }
 
+
+// to insert at index, go to node at index-1. 
+// new node's next = next of that node and then next of currNode to newNode
 void insertAt(Node* &head, int index, int val)
 {
     if (index == 0){
@@ -46,7 +45,7 @@ void insertAt(Node* &head, int index, int val)
     }
 }
 
-
+// to delete node at index.   Go to index-1 node and point its next to next.next
 void deleteNode(Node* &head, int index)
 {
     if (head == NULL or index < 0) return ;
@@ -87,6 +86,10 @@ void reverse_list(Node* &head)
     Node* r = NULL ;
     Node* q = head , *p ;
 
+    // initial order r , q ->
+    // now we change the next of q and set it to r. so r and q are reversed
+    // but now we cannot move to original next of q.
+    // for this we have third pointer p. Using p , q can move forward
     while (q != NULL)
     {
         p = q->next;
@@ -95,6 +98,7 @@ void reverse_list(Node* &head)
         q = p ;
     } 
 
+    // finally set head of our linked list to last node
     head = r ;
 }
 
@@ -110,32 +114,43 @@ void recursive_reverse(Node* n, Node* t)
 
 }
 
-void removeLoop(Node* head)
+void removeLoop(Node* &n)
 {
-    if (head == NULL or head->next == NULL) 
+    // if only one node present then ther's no loop
+    if (n == NULL or n->next == NULL) 
     {
         cout << "No Loop\n" ;
         return ;
     }
 
-    Node * fast = head ;
-    Node * slow = head ;
+     // Here we are using Tortise and Hare (Floyd's algorithm)
+    // fast pointer moves forward by two steps while slow moves by one step
+    Node * fast = n ;
+    Node * slow = n ;
     
+    // keep slow and fast moving until they meet at same point
     do{
         fast = fast->next->next;
         slow = slow->next;
+
+         // if fast == null or fast.next == null then there's no loop in linked list. Return
         if (fast == NULL or fast->next == NULL) {
             cout << "No Loop\n" ;
             return ;
         }
     } while (fast != slow) ;
 
-    fast = head ;
+    // now slow and fast are at same node.
+    // move fast to the first node. Move fast as well as slow by one step each time
+    // until their next is not same
+
+    fast = n ;
     while (fast->next != slow->next) {
         fast = fast->next; 
         slow = slow->next ;
     }
 
+    // when next of slow = next of fast. slow is at last node. Make next of slow = null
     slow->next = NULL ;
     cout << "Removed the loop\n" ;
 
@@ -168,6 +183,7 @@ int main()
     removeLoop(head) ;
     printList(head) ;
     reverse_list(head) ;
+    recursive_reverse(head, NULL) ;
     printList(head) ;
 
     deleteNode(head, 5) ;
