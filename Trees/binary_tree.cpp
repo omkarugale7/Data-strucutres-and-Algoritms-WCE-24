@@ -160,6 +160,20 @@ void printLevelOrder(Node * root)
 
 }
 
+int height(Node * n)
+{
+  if (n == NULL) return 0 ;
+
+  if (n->left == NULL && n->right == NULL) return 0 ;
+
+  int x = 0 , y = 0 ;
+  if (n->left != NULL) x = height(n->left) ;
+  if (n->right != NULL) y = height(n->right) ;
+
+    return max(x, y) + 1 ;
+
+}
+
 
 int main()
 {
@@ -168,6 +182,7 @@ int main()
   printInorder(root) ;
   cout << "\n" ;
   printLevelOrder(root) ;
+  cout << "\nHeight : " << height(root) << " " ;
 }
 
 
