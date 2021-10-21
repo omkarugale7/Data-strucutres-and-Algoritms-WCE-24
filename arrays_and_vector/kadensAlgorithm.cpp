@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std ;
 
+// find the maximum possible sum of any subarray in given array
 int kaden(int arr[], int n)
 {
     int currSum = 0 , maxSum = INT_MIN;
