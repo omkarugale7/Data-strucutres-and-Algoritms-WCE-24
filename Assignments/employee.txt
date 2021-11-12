@@ -1,0 +1,9 @@
+
+
+Employee 1:
+	Name: Aman
+	Id:1
+	Age:23
+	Position:ejfsdk
+	Joining Date:2345t6
+	Salary(in Rs):123456

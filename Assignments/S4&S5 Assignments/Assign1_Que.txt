@@ -1,0 +1,30 @@
+Assignment 1
+Topic: Class, Objects and C++ Function (Basics of Object-Oriented Programming)
+Batch S4 and S5
+Course: Programming Lab 1                                                                        Course Teacher: Ms. Rokade S. S.
+Deadline:20/10/2021
+
+
+
+1.	C++ Program to Find the Square Root of a Number
+2.	Write a program to check character entered is alphabet, digit or special character using library functions.
+3.	Write a program which display a number between 10 to 100 randomly
+4.	Write a program which accept a letter and display it in uppercase letter.
+5.	Write a C++ program to implement the Number Guessing Game. In this game the computer chooses a random number between 1 and 100, and the player tries to guess the number in as few attempts as possible. Each time the player enters a guess, the computer tells him whether the guess is too high, too low, or right. Once the player guesses the number, the game is over.
+6.	Create a student class to enter and display information from user such as Roll No, Name, Address, Marks of five subjects and average (create five objects to enter and display data). 
+7.	Write a program using class to accept 3 numbers from user and display largest, second largest and smallest number among three.
+8.	Write a program to read 3 values of a, b and c and calculate value of X as
+9.	X= a/b – c
+10.	
+11.	Write a C++ Program to Check given number is Prime number or not using function.
+12.	Write a C++ Program to find Factorial of a Number using function.
+13.	Write a C++ Program to Find HCF of two numbers using function.
+14.	Write a C++ program to find LCM of two numbers using function.
+15.	Write a C++ Program to Find Frequency of Characters in String.
+16.	Write a C++ Program to perform below operations (use separate functions for every operation)
+a.	Binary to Octal
+b.	Octal to Binary
+c.	Binary to Hexadecimal
+d.	Hexadecimal to Binary
+e.	Octal to Hexadecimal
+f.	Hexadecimal to Octal
