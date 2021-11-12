@@ -1,0 +1,90 @@
+// Employee details
+
+
+#include <stdio.h>
+#include <conio.h>
+
+struct employee
+{
+    char name[50];
+    int age;
+    int emp_id;
+    int salary; 
+
+};
+
+int main(){
+    int i;
+    struct employee a[i], *p;
+
+    printf("Enter the number of Employee : ");
+    scanf("%d", &i);
+    
+    struct employee a[i];
+    
+    printf("Enter The Employee Information : ");
+    for(int j=1; j<=i; j++){
+        printf("\nEnter Name : ");
+        scanf("%s", &a[j].name);
+        printf("Enter the age : ");
+        scanf("%d", &a[j].age);
+        printf("Enter the Employee id : ");
+        scanf("%d", &a[j].emp_id);
+        printf("Enter the salary : "); 
+        scanf("%d", &a[j].salary);
+    }
+    printf("\nDisplaying Information of the Employees : \n");
+     p=&a[i];
+    for(int j=1; j<=i; j++){
+        printf("\nName : %s", p->name);
+        printf("\nAge : %d", p->age);
+        printf("\nEmployee id : %d", p->emp_id);
+        printf("\nSalary : %d", p->salary);
+        printf("\n\n");
+    }
+    return 0;
+}
+
+
+
+    //Students details
+    
+    #include <stdio.h>
+#include <conio.h>
+
+struct student
+{
+    char name[50];
+    int age;
+    int roll_no;
+    int std; 
+
+};
+
+int main(){
+    int i;
+    struct student a[i], *p;
+    printf("Enter the number of Students : ");
+    scanf("%d", &i);
+    printf("Enter The Student Information : ");
+    for(int j=1; j<=i; j++){
+        printf("\nEnter Name : ");
+        scanf("%s", &a[j].name);
+        printf("Enter the Age : ");
+        scanf("%d", &a[j].age);
+        printf("Enter the Roll No : ");
+        scanf("%d", &a[j].roll_no);
+        printf("Enter the Class : "); 
+        scanf("%d", &a[j].std);
+    }
+    printf("\nDisplaying Information of the Students : \n");
+     p=&a[i];
+    for(int j=1; j<=i; j++){
+        printf("\nName : %s", p->name);
+        printf("\nAge : %d", p->age);
+        printf("\nRoll No. : %d", p->roll_no);
+        printf("\nClass : %d", p->std);
+        printf("\n\n");
+    }
+    return 0;
+}
